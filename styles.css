@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #004c8c;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 15px;
+    color: #f4f4f4;
+    margin: 0;
+    margin-top: 45px;
+}
+
+nav {
+    background-color: #005ca9;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    padding: 15px 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 40px 0;
+}
+
+h2 {
+    color: #005ca9;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.calculator-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #005ca9;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #004c8c;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e6f3ff;
+    border-radius: 4px;
+}
+
+#result h3 {
+    color: #005ca9;
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #004c8c;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+footer.p {
+    color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+}

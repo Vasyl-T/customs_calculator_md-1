@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор митних платежів - Державна митна служба України</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="Державна Митна Служба.png" alt="Логотип Державної митної служби України" class="logo">
+            <h1>Закарпатська митниця</h1>
+        </div>
+    </header>
+    <main class="container">
+        <h2>Калькулятор митних платежів</h2>
+        <h3>(виключно для товарів (за винятком підакцизних), що ввозяться громадянами на митну територію України 
+            у ручній поклажі та/або у супроводжуваному багажі, загальною фактурною вартістю, що не перевищує еквівалент 10000 євро)</h3>
+        <div class="calculator-container">
+            <form id="customsDutyForm">
+                <div class="form-group">
+                    <div style="display: flex; gap: 10px; align-items: flex-end;">
+        <div style="flex-grow: 1;">
+            <label for="value">Вартість товарів</label>
+            <input type="number" id="value" name="value" min="0" step="0.01" required style="width: 100%;">
+        </div>
+        <div style="width: 140px;">
+            <label for="currency">Валюта</label>
+            <select id="currency" name="currency" style="width: 100%; height: 38px;">
+                <option value="EUR" selected>EUR (€)</option>
+                <option value="USD">USD ($)</option>
+                <option value="PLN">PLN (zł)</option>
+                <option value="CZK">CZK (Kč)</option>
+                <option value="HUF">HUF (Ft)</option>
+                <option value="CHF">CHF (CHF)</option>
+                <option value="SEK">SEK (kr)</option>
+                <option value="DKK">DKK (kr)</option>
+                <option value="NOK">NOK (kr)</option>
+                <option value="BGN">BGN (лв)</option>
+                <option value="RON">RON (lei)</option>
+                <option value="MDL">MDL (lei)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="UAH">UAH (₴)</option>
+            </select>
+        </div>
+    </div>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Вага товарів (кг)</label>
+                    <input type="number" id="weight" name="weight" required>
+                </div>
+                <div class="form-group">
+                    <label>Тип пункту пропуску</label>
+                    <div class="radio-group">
+                        <input id="land" name="entryType" type="radio" value="land" checked>
+                        <label for="land">Наземний/Водний</label>
+                        <input id="air" name="entryType" type="radio" value="air">
+                        <label for="air">Повітряний</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Перший в'їзд за добу?</label>
+                    <div class="radio-group">
+                        <input id="first-entry-yes" name="isFirstEntry" type="radio" value="yes" checked>
+                        <label for="first-entry-yes">Так</label>
+                        <input id="first-entry-no" name="isFirstEntry" type="radio" value="no">
+                        <label for="first-entry-no">Ні</label>
+                    </div>
+                </div>
+                <div id="additionalQuestions">
+                    <div id="stayedOver24hGroup" class="form-group">
+                        <label>Перебування за межами України понад 24 години?</label>
+                        <div class="radio-group">
+                            <input id="stayed-over-24h-yes" name="stayedOver24h" type="radio" value="yes" checked>
+                            <label for="stayed-over-24h-yes">Так</label>
+                            <input id="stayed-over-24h-no" name="stayedOver24h" type="radio" value="no">
+                            <label for="stayed-over-24h-no">Ні</label>
+                        </div>
+                    </div>
+                    <div id="entryFrequencyGroup" class="form-group">
+                        <label>Частота в'їзду в Україну</label>
+                        <div class="radio-group">
+                            <input id="entry-frequency-less" name="entryFrequency" type="radio" value="less" checked>
+                            <label for="entry-frequency-less">Не частіше одного разу на 72 години</label>
+                            <input id="entry-frequency-more" name="entryFrequency" type="radio" value="more">
+                            <label for="entry-frequency-more">Частіше одного разу на 72 години</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Розрахувати</button>
+            </form>
+            <div id="result" class="hidden">
+                <!-- Результати будуть додані сюди за допомогою JavaScript -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 
+                <a href="https://zk.customs.gov.ua" target="_blank">Митниця в смартфоні.</a>Закарпатська митниця</p>                
+                <p>2023 - 2024. Всі права захищені.</p>
+        </div>  
+    </footer>
+    <script src="calculator.js"></script>
+</body>
+</html>
