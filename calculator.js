@@ -246,10 +246,13 @@ document.addEventListener('DOMContentLoaded', function() {
             <hr style="border: 0; border-top: 1px solid #ccc; margin: 15px 0;">
             <p style="font-size: 1.1em;"><strong>Загальна сума платежів: ${totalPaymentEur.toFixed(2)} EUR</strong></p>
             ${uahBreakdownHtml}
-           <!-- <p style="background-color: #fffbe6; padding: 10px; border-left: 4px solid #faad14; font-size: 0.9em; margin-top: 15px;">
+<!-- Закоментовано, щоб не виводити пояснення: -->
+            ${/* 
+            <p style="background-color: #fffbe6; padding: 10px; border-left: 4px solid #faad14; font-size: 0.9em; margin-top: 15px;">
                 <em><strong>Пояснення:</strong> ${explanation}</em>
             </p>
-        `;-->
+            */ ''}
+        `;
 
         resultDiv.classList.remove('hidden');
         resultDiv.style.opacity = '0';
