@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             uahBreakdownHtml = `
                 <div style="background-color: #f8f9fa; padding: 12px; border-radius: 6px; border: 1px solid #e9ecef; margin: 10px 0; font-size: 0.95em;">
-                    <p style="margin: 3px 0;"><strong>У гривнях за курсом НБУ (${eurRate.toFixed(4)} грн/EUR):</strong></p>
+                    <p style="margin: 3px 0;"><strong>У гривнях за курсом НБУ станом на сьогодні (${eurRate.toFixed(4)} грн/EUR):</strong></p>
                     <p style="margin: 3px 0;">• Основа мита: <strong>${dutyBaseUah.toFixed(2)} грн</strong> → Мито (10%): <strong>${dutyUah.toFixed(2)} грн</strong></p>
                     <p style="margin: 3px 0;">• Основа ПДВ: <strong>${vatBaseUah.toFixed(2)} грн</strong> → ПДВ (20%): <strong>${vatUah.toFixed(2)} грн</strong></p>
                 </div>
