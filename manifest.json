@@ -1,0 +1,10 @@
+{
+  "name": "Митний калькулятор (для товарів громадян)",
+  "short_name": "Duty Calculator UA Customs",
+  "start_url": "/customs_calculator_md-1/",
+  "display": "standalone",
+  "background_color": "#f4f7f6",
+  "theme_color": "#1e3c72",
+  "lang": "uk",
+  "icons": []
+}
